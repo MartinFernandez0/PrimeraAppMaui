@@ -19,7 +19,7 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="ISP N°20 Nestor J. Zamaro"
+                Text="Instituto Superior de Profesorado N°20 Nestor J. Zamaro"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
