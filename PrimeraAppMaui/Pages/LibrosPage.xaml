@@ -3,13 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrimeraAppMaui.Pages.LibrosPage"
              Title="Libros">
-    <VerticalStackLayout>
-        <Label 
+    
+    <ScrollView>
+        
+        <VerticalStackLayout>
+            <Label 
             Text="Lista de Libros"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+            <ScrollView>
+                <CollectionView x:Name="CollectionLibros"
+                          SelectionMode=" Single"
+                          SelectedItems="{Binding libroSeleccionado}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="*,2*" RowDefinitions="*,*,2*">
+                            <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HeightRequest="250" Source="{Binding portada_url}"></Image>
+                            <Label Grid.Row="0" Grid.Column="1" FontSize="Title" Text="{Binding nombre}"></Label>
+                            <Label Grid.Row="1" Grid.Column="1" FontSize="Title" Text="{Binding autor}"></Label>
+                            <Label Grid.Row="2" Grid.Column="1" FontSize="Title" Text="{Binding sinopsis}"></Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>      
+                
+                
+                </CollectionView>
+            </ScrollView>
         
-        <Button
+            <Button
             x:Name="btnVolver"
             Text="Libros"
             FontSize="Large"
@@ -17,5 +39,8 @@
             HorizontalOptions="Center"
             Clicked="btnVolver_Clicked"/>
         
-    </VerticalStackLayout>
+         </VerticalStackLayout>
+        
+    </ScrollView>
+    
 </ContentPage>
