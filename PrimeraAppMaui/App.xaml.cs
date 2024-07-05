@@ -8,7 +8,7 @@ namespace PrimeraAppMaui
         {
             InitializeComponent();
 
-            MainPage = new InicioPage();
+            MainPage = new NavigationPage(new InicioPage());
         }
     }
 }

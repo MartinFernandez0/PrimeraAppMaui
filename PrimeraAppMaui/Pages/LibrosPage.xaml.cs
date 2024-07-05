@@ -6,4 +6,8 @@ public partial class LibrosPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    private void btnVolver_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PopAsync();
+    }
 }

@@ -6,4 +6,10 @@ public partial class InicioPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+		//Metodo para llamar a otra pagina desde un boton
+		Navigation.PushAsync(new LibrosPage());
+    }
 }

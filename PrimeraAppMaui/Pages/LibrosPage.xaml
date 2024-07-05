@@ -8,5 +8,14 @@
             Text="Lista de Libros"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        
+        <Button
+            x:Name="btnVolver"
+            Text="Libros"
+            FontSize="Large"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="btnVolver_Clicked"/>
+        
     </VerticalStackLayout>
 </ContentPage>
