@@ -18,16 +18,15 @@
                           SelectedItems="{Binding libroSeleccionado}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid ColumnDefinitions="*,2*" RowDefinitions="*,*,2*">
-                            <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HeightRequest="250" Source="{Binding portada_url}"></Image>
-                            <Label Grid.Row="0" Grid.Column="1" FontSize="Title" Text="{Binding nombre}"></Label>
-                            <Label Grid.Row="1" Grid.Column="1" FontSize="Title" Text="{Binding autor}"></Label>
-                            <Label Grid.Row="2" Grid.Column="1" FontSize="Title" Text="{Binding sinopsis}"></Label>
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>      
-                
-                
+                            <Grid Padding="10" ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, *">
+                                <Image Grid.RowSpan="3" HeightRequest="150" WidthRequest="110" Source="{Binding portada_url}" Aspect="AspectFill"/>
+                                <Label Grid.Row="0" Grid.Column="1" FontSize="Title" Text="{Binding nombre}" VerticalOptions="Center" FontAutoScalingEnabled="True"/>
+                                <Label Grid.Row="1" Grid.Column="1" FontSize="Body" Text="{Binding autor}" VerticalOptions="Center"/>
+                                <Label Grid.Row="2" Grid.Column="1" FontSize="Micro" Text="{Binding sinopsis}" VerticalOptions="Center" VerticalTextAlignment="End"/>
+                            </Grid>
+                        </DataTemplate>
+                </CollectionView.ItemTemplate>  
+                    
                 </CollectionView>
             </ScrollView>
         
