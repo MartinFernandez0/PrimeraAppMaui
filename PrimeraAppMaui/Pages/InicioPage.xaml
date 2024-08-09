@@ -10,7 +10,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Button Text="Libros"
+        <Button Text="Libros Publicados"
                 FontSize="Large"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
